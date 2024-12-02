@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 1: Must y Mustn't</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question-container {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #2a717e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1f5980;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .explanation {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .explanation h2 {
+            font-size: 22px;
+            color: #2a717e;
+            margin-bottom: 20px;
+        }
+        .explanation p, .explanation ul {
+            font-size: 16px;
+        }
+        .explanation ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+        .explanation li {
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #2a717e;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+    </nav><br><br><br>
+    
+    <h1>Examen 12: Say and tell</h1>
+    <div class="question-container" id="question-container">
+        <p id="question-text">Loading question...</p>
+        <div class="options" id="options-container"></div>
+        <button id="next-btn">Siguiente</button>
+        <button id="translate-btn">Traducir</button>
+    </div>
+
+
+    <div class="explanation">
+        <h2>Explicación de "Say" y "Tell"</h2>
+        <p>En inglés, tanto <strong>"say"</strong> como <strong>"tell"</strong> se utilizan para hablar de la acción de comunicar algo, pero se usan en contextos diferentes.</p>
+    
+        <h3>1. Uso de "Say"</h3>
+        <p><strong>"Say"</strong> se utiliza para expresar palabras, frases o pensamientos. Generalmente, se usa cuando se menciona directamente lo que se ha dicho, y no siempre es necesario especificar quién lo recibe. Además, <strong>say</strong> no se usa con un complemento directo (la persona a la que se le dice algo) de forma obligatoria.</p>
+        
+        <h3>Fórmula:</h3>
+        <p><strong>say + (something) + (to someone)</strong></p>
+        <ul>
+            <li><strong>She said (that) she was tired.</strong> (Ella dijo que estaba cansada.)</li>
+            <li><strong>He said goodbye before leaving.</strong> (Él dijo adiós antes de irse.)</li>
+            <li><strong>They said they would come tomorrow.</strong> (Ellos dijeron que vendrían mañana.)</li>
+        </ul>
+        
+        <h3>2. Uso de "Tell"</h3>
+        <p><strong>"Tell"</strong> se usa cuando se habla a una persona en particular, es decir, se indica a quién se está dando la información. A diferencia de "say", con "tell" siempre debe haber una persona a la que se le transmite la información (es decir, un complemento directo).</p>
+    
+        <h3>Fórmula:</h3>
+        <p><strong>tell + (someone) + (something)</strong></p>
+        <ul>
+            <li><strong>She told me the news.</strong> (Ella me contó las noticias.)</li>
+            <li><strong>He told us that he would be late.</strong> (Él nos dijo que llegaría tarde.)</li>
+            <li><strong>They told him to wait outside.</strong> (Ellos le dijeron que esperara afuera.)</li>
+        </ul>
+        
+        <h3>Diferencias clave:</h3>
+        <ul>
+            <li>Usamos <strong>"say"</strong> cuando no hay un destinatario específico o cuando solo mencionamos las palabras de una persona.</li>
+            <li>Usamos <strong>"tell"</strong> cuando es necesario mencionar a la persona a la que se le comunica algo.</li>
+        </ul>
+    
+        <h3>Ejemplos adicionales:</h3>
+        <ul>
+            <li><strong>She said, "I am going to the store."</strong> (Ella dijo: "Voy a la tienda.")</li>
+            <li><strong>He told me that he would arrive at 6 PM.</strong> (Él me dijo que llegaría a las 6 PM.)</li>
+            <li><strong>They said that they had finished their homework.</strong> (Ellos dijeron que habían terminado su tarea.)</li>
+            <li><strong>I will tell her the truth.</strong> (Le diré la verdad.)</li>
+        </ul>
+        
+        <p>En resumen, la principal diferencia entre <strong>"say"</strong> y <strong>"tell"</strong> es que <strong>"say"</strong> no requiere un destinatario específico, mientras que <strong>"tell"</strong> siempre necesita una persona a la que se le diga algo.</p>
+    </div>
+    
+
+    <script>
+        const examKey = "progreso_examen_12"; 
+        const questions = [
+    { id: 1, text: "She ___, 'I love this movie!'", translated: "Ella ___, '¡Me encanta esta película!'", options: ["said", "told", "say"], correct: "said" },
+    { id: 2, text: "I will ___ you a secret.", translated: "Te ___ un secreto.", options: ["tell", "say", "told"], correct: "tell" },
+    { id: 3, text: "He ___ that he was tired.", translated: "Él ___ que estaba cansado.", options: ["said", "told", "say"], correct: "said" },
+    { id: 4, text: "She ___ me to wait for her outside.", translated: "Ella ___ que la esperara afuera.", options: ["told", "said", "say"], correct: "told" },
+    { id: 5, text: "They ___ that they were excited for the trip.", translated: "Ellos ___ que estaban emocionados por el viaje.", options: ["said", "told", "tell"], correct: "said" },
+    { id: 6, text: "He always ___ that he is busy.", translated: "Él siempre ___ que está ocupado.", options: ["says", "said", "told"], correct: "says" },
+    { id: 7, text: "She ___ me, 'I will be there soon.'", translated: "Ella ___, 'Estaré allí pronto.'", options: ["told", "said", "tell"], correct: "told" },
+    { id: 8, text: "I ___ him the news this morning.", translated: "Yo ___ las noticias esta mañana.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 9, text: "Can you ___ me how to get to the station?", translated: "¿Puedes ___ cómo llegar a la estación?", options: ["tell", "say", "told"], correct: "tell" },
+    { id: 10, text: "She ___ that she was tired and wanted to go home.", translated: "Ella ___ que estaba cansada y quería ir a casa.", options: ["said", "told", "say"], correct: "said" },
+    { id: 11, text: "He ___, 'I don't understand.'", translated: "Él ___, 'No entiendo.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 12, text: "They ___ us to leave early.", translated: "Ellos ___ que nos fuéramos temprano.", options: ["told", "said", "say"], correct: "told" },
+    { id: 13, text: "She ___ me that she would come later.", translated: "Ella ___ que llegaría más tarde.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 14, text: "I ___ him I was sorry.", translated: "Yo ___ que lo sentía.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 15, text: "He ___, 'I can't find my keys.'", translated: "Él ___, 'No encuentro mis llaves.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 16, text: "Can you ___ me your phone number?", translated: "¿Puedes ___ tu número de teléfono?", options: ["tell", "say", "told"], correct: "tell" },
+    { id: 17, text: "She ___ that she wanted to go to the park.", translated: "Ella ___ que quería ir al parque.", options: ["said", "told", "tell"], correct: "said" },
+    { id: 18, text: "I ___ them about the new project.", translated: "Yo ___ sobre el nuevo proyecto.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 19, text: "He ___ me that he would call me later.", translated: "Él ___ que me llamaría más tarde.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 20, text: "She always ___, 'Everything is fine.'", translated: "Ella siempre ___, 'Todo está bien.'", options: ["says", "said", "told"], correct: "says" },
+    { id: 21, text: "I ___ you not to worry.", translated: "Te ___ que no te preocuparas.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 22, text: "They ___ me they would be here soon.", translated: "Ellos ___ que estarían aquí pronto.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 23, text: "He ___, 'I have to leave now.'", translated: "Él ___, 'Tengo que irme ahora.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 24, text: "She ___ me how to solve the problem.", translated: "Ella ___ cómo resolver el problema.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 25, text: "I ___ you that I would help.", translated: "Te ___ que ayudaría.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 26, text: "He ___ me, 'I am running late.'", translated: "Él ___, 'Estoy llegando tarde.'", options: ["told", "said", "say"], correct: "told" },
+    { id: 27, text: "She ___, 'I don't like this movie.'", translated: "Ella ___, 'No me gusta esta película.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 28, text: "They ___ us to wait here.", translated: "Ellos ___ que esperáramos aquí.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 29, text: "I ___ them I would join them later.", translated: "Yo ___ que me uniría a ellos más tarde.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 30, text: "She ___ me that she was feeling sick.", translated: "Ella ___ que se sentía enferma.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 31, text: "He ___, 'I will go to the store.'", translated: "Él ___, 'Voy a ir a la tienda.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 32, text: "They ___ me they were leaving.", translated: "Ellos ___ que se iban.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 33, text: "I ___ her to go to bed early.", translated: "Yo ___ que se acostara temprano.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 34, text: "She ___, 'I need to rest.'", translated: "Ella ___, 'Necesito descansar.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 35, text: "He ___ me not to worry.", translated: "Él ___ que no me preocupara.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 36, text: "They ___, 'We are going to the beach.'", translated: "Ellos ___, 'Vamos a la playa.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 37, text: "I ___ him I would be there on time.", translated: "Yo ___ que estaría allí a tiempo.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 38, text: "She ___, 'I'm going to the store.'", translated: "Ella ___, 'Voy a la tienda.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 39, text: "He ___ me not to tell anyone.", translated: "Él ___ que no le dijera a nadie.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 40, text: "I ___ them I had finished my work.", translated: "Yo ___ que había terminado mi trabajo.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 41, text: "She ___, 'I'm so happy to see you!'", translated: "Ella ___, '¡Estoy tan feliz de verte!'", options: ["said", "told", "say"], correct: "said" },
+    { id: 42, text: "He ___ us the answer to the question.", translated: "Él ___ la respuesta a la pregunta.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 43, text: "I ___ her, 'Be careful!'", translated: "Yo ___, '¡Ten cuidado!'", options: ["told", "said", "tell"], correct: "told" },
+    { id: 44, text: "They ___ me they would help me later.", translated: "Ellos ___ que me ayudarían más tarde.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 45, text: "She ___, 'I will call you soon.'", translated: "Ella ___, 'Te llamaré pronto.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 46, text: "He ___, 'We need to hurry up.'", translated: "Él ___, 'Necesitamos darnos prisa.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 47, text: "They ___, 'We are going home now.'", translated: "Ellos ___, 'Ahora nos vamos a casa.'", options: ["said", "told", "say"], correct: "said" },
+    { id: 48, text: "I ___ them that I would be back soon.", translated: "Yo ___ que regresaría pronto.", options: ["told", "said", "tell"], correct: "told" },
+    { id: 49, text: "She ___ me, 'You did a great job!'", translated: "Ella ___, '¡Hiciste un gran trabajo!'", options: ["told", "said", "tell"], correct: "told" },
+    { id: 50, text: "I ___ him to take it easy.", translated: "Yo ___ que se tomara las cosas con calma.", options: ["told", "said", "tell"], correct: "told" }
+];
+
+
+        const savedProgress = JSON.parse(localStorage.getItem(examKey)) || [];
+        let remainingQuestions = questions.filter(q => !savedProgress.includes(q.id));
+
+        const questionContainer = document.getElementById("question-container");
+        const questionText = document.getElementById("question-text");
+        const optionsContainer = document.getElementById("options-container");
+        const nextBtn = document.getElementById("next-btn");
+        const translateBtn = document.getElementById("translate-btn");
+
+        let isTranslated = false; 
+
+        function showRandomQuestion() {
+            if (remainingQuestions.length === 0) {
+                questionText.textContent = "¡Has completado el examen!";
+                optionsContainer.innerHTML = "";
+                nextBtn.style.display = "none";
+                translateBtn.style.display = "none"; 
+                localStorage.removeItem(examKey); 
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+            const currentQuestion = remainingQuestions[randomIndex];
+
+            questionText.textContent = currentQuestion.text;
+            isTranslated = false; 
+
+            optionsContainer.innerHTML = "";
+            currentQuestion.options.forEach(option => {
+                const label = document.createElement("label");
+                label.innerHTML = `<input type="radio" name="option" value="${option}"> ${option}`;
+                optionsContainer.appendChild(label);
+            });
+
+            translateBtn.onclick = () => {
+                if (isTranslated) {
+                    questionText.textContent = currentQuestion.text; 
+                } else {
+                    questionText.textContent = currentQuestion.translated; 
+                }
+                isTranslated = !isTranslated; 
+            };
+
+            nextBtn.onclick = () => {
+                const selectedOption = document.querySelector('input[name="option"]:checked');
+                if (!selectedOption) {
+                    alert("Por favor, selecciona una opción.");
+                    return;
+                }
+
+                const answer = selectedOption.value;
+                if (answer === currentQuestion.correct) {
+                    alert("Respuesta correcta.");
+                } else {
+                    alert(`Respuesta incorrecta. La respuesta correcta es: ${currentQuestion.correct}`);
+                }
+
+                savedProgress.push(currentQuestion.id);
+                localStorage.setItem(examKey, JSON.stringify(savedProgress));
+                remainingQuestions.splice(randomIndex, 1); 
+                showRandomQuestion(); 
+            };
+        }
+
+        showRandomQuestion();
+    </script>
+</body>
+</html>

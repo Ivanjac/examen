@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 1: Must y Mustn't</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question-container {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #2a717e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1f5980;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .explanation {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .explanation h2 {
+            font-size: 22px;
+            color: #2a717e;
+            margin-bottom: 20px;
+        }
+        .explanation p, .explanation ul {
+            font-size: 16px;
+        }
+        .explanation ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+        .explanation li {
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #2a717e;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+    </nav><br><br><br>
+    
+    <h1>Examen 6: Second conditional</h1>
+    <div class="question-container" id="question-container">
+        <p id="question-text">Loading question...</p>
+        <div class="options" id="options-container"></div>
+        <button id="next-btn">Siguiente</button>
+        <button id="translate-btn">Traducir</button>
+    </div>
+
+
+    <div class="explanation">
+        <h2>Explicación de "Second Conditional"</h2>
+        <p><strong>"Second Conditional"</strong> se utiliza para hablar de situaciones hipotéticas o improbables en el presente o futuro. Estas situaciones son poco probables de ocurrir o son irreales. Se forma utilizando la estructura:</p>
+        <ul>
+            <li><strong>If + past simple, + would + base verb.</strong></li>
+        </ul>
+        <p>Por ejemplo:</p>
+        <ul>
+            <li><strong>If I had a million dollars, I would travel the world.</strong> (Si tuviera un millón de dólares, viajaría por el mundo.)</li>
+            <li><strong>If she studied more, she would pass the exam.</strong> (Si ella estudiara más, aprobaría el examen.)</li>
+        </ul>
+        <p>En el <strong>Second Conditional</strong>, la acción en la cláusula condicional (If) está en el pasado simple, mientras que la acción principal está en la forma del <strong>would</strong> + verbo base.</p>
+        <p>Este tipo de condicional se usa cuando se habla de situaciones que no son reales o son muy poco probables en el presente o futuro, a diferencia del <strong>First Conditional</strong>, que se usa para situaciones posibles o probables.</p>
+        <p>Ejemplo adicional:</p>
+        <ul>
+            <li><strong>If I were you, I would speak to the teacher.</strong> (Si fuera tú, hablaría con el maestro.)</li>
+        </ul>
+        <p>En el <strong>Second Conditional</strong>, "were" se utiliza en lugar de "was" con "I" o "he/she/it" para situaciones hipotéticas.</p>
+    </div>
+    
+
+    <script>
+        const examKey = "progreso_examen_6"; 
+        const questions = [
+    { id: 1, text: "If I ___ (have) a million dollars, I would travel the world.", translated: "Si yo ___ (tuviera) un millón de dólares, viajaría por el mundo.", options: ["had", "have", "will have"], correct: "had" },
+    { id: 2, text: "If she ___ (study) harder, she would pass the exam.", translated: "Si ella ___ (estudiara) más, aprobaría el examen.", options: ["studied", "studies", "has studied"], correct: "studied" },
+    { id: 3, text: "If they ___ (be) more organized, they would finish the project on time.", translated: "Si ellos ___ (fueran) más organizados, terminarían el proyecto a tiempo.", options: ["were", "are", "was"], correct: "were" },
+    { id: 4, text: "If I ___ (know) his phone number, I would call him.", translated: "Si yo ___ (supiera) su número de teléfono, lo llamaría.", options: ["knew", "know", "knows"], correct: "knew" },
+    { id: 5, text: "If you ___ (ask) me, I would help you.", translated: "Si tú ___ (me pidieras), te ayudaría.", options: ["asked", "ask", "asking"], correct: "asked" },
+    { id: 6, text: "If we ___ (live) in a bigger house, we could have a garden.", translated: "Si nosotros ___ (viviéramos) en una casa más grande, podríamos tener un jardín.", options: ["lived", "live", "lives"], correct: "lived" },
+    { id: 7, text: "If she ___ (be) here, she would help us.", translated: "Si ella ___ (estuviera) aquí, nos ayudaría.", options: ["were", "was", "is"], correct: "were" },
+    { id: 8, text: "If I ___ (not be) so busy, I would join you for dinner.", translated: "Si yo ___ (no estuviera) tan ocupado, me uniría a ustedes para cenar.", options: ["weren't", "am not", "wasn't"], correct: "weren't" },
+    { id: 9, text: "If we ___ (have) a car, we could go to the beach.", translated: "Si nosotros ___ (tuviéramos) un coche, podríamos ir a la playa.", options: ["had", "have", "had had"], correct: "had" },
+    { id: 10, text: "If you ___ (be) more careful, you wouldn't make mistakes.", translated: "Si tú ___ (fueras) más cuidadoso, no cometerías errores.", options: ["were", "was", "are"], correct: "were" },
+    { id: 11, text: "If they ___ (ask) for directions, they would have arrived by now.", translated: "Si ellos ___ (hubieran pedido) direcciones, ya habrían llegado.", options: ["had asked", "asked", "ask"], correct: "had asked" },
+    { id: 12, text: "If I ___ (be) you, I wouldn't worry about it.", translated: "Si yo ___ (fuera) tú, no me preocuparía por eso.", options: ["were", "was", "am"], correct: "were" },
+    { id: 13, text: "If she ___ (get) the job, she would move to New York.", translated: "Si ella ___ (consiguiera) el trabajo, se mudaría a Nueva York.", options: ["got", "gets", "had got"], correct: "got" },
+    { id: 14, text: "If we ___ (have) enough time, we could visit the museum.", translated: "Si nosotros ___ (tuviéramos) suficiente tiempo, podríamos visitar el museo.", options: ["had", "have", "will have"], correct: "had" },
+    { id: 15, text: "If you ___ (study) harder, you could pass the exam.", translated: "Si tú ___ (estudiaras) más, podrías aprobar el examen.", options: ["studied", "study", "had studied"], correct: "studied" },
+    { id: 16, text: "If I ___ (be) in your position, I would choose the other option.", translated: "Si yo ___ (estuviera) en tu lugar, elegiría la otra opción.", options: ["were", "was", "am"], correct: "were" },
+    { id: 17, text: "If they ___ (invite) us, we would go to the party.", translated: "Si ellos ___ (nos invitaran), iríamos a la fiesta.", options: ["invited", "invite", "invites"], correct: "invited" },
+    { id: 18, text: "If we ___ (not be) so tired, we could go for a walk.", translated: "Si nosotros ___ (no estuviéramos) tan cansados, podríamos salir a caminar.", options: ["weren't", "wasn't", "aren't"], correct: "weren't" },
+    { id: 19, text: "If she ___ (know) about the meeting, she would have attended.", translated: "Si ella ___ (hubiera sabido) sobre la reunión, habría asistido.", options: ["had known", "knew", "knows"], correct: "had known" },
+    { id: 20, text: "If I ___ (not eat) so much, I wouldn't feel so full.", translated: "Si yo ___ (no comiera) tanto, no me sentiría tan lleno.", options: ["didn't eat", "don't eat", "ate"], correct: "didn't eat" },
+    { id: 21, text: "If we ___ (not miss) the train, we would be on time.", translated: "Si nosotros ___ (no hubiéramos perdido) el tren, estaríamos a tiempo.", options: ["hadn't missed", "didn't miss", "missed"], correct: "hadn't missed" },
+    { id: 22, text: "If you ___ (take) the bus, you would save money.", translated: "Si tú ___ (tomaras) el autobús, ahorrarías dinero.", options: ["took", "take", "taken"], correct: "took" },
+    { id: 23, text: "If he ___ (run) faster, he would have won the race.", translated: "Si él ___ (hubiera corrido) más rápido, habría ganado la carrera.", options: ["had run", "ran", "runs"], correct: "had run" },
+    { id: 24, text: "If I ___ (live) closer to my office, I would walk to work.", translated: "Si yo ___ (viviera) más cerca de mi oficina, iría caminando al trabajo.", options: ["lived", "live", "living"], correct: "lived" },
+    { id: 25, text: "If you ___ (invite) her, she would come to the party.", translated: "Si tú ___ (la invitaras), ella iría a la fiesta.", options: ["invited", "invites", "invite"], correct: "invited" },
+    { id: 26, text: "If I ___ (know) the answer, I would have told you.", translated: "Si yo ___ (hubiera sabido) la respuesta, te lo habría dicho.", options: ["had known", "knew", "knows"], correct: "had known" },
+    { id: 27, text: "If you ___ (not be) so stubborn, we could have solved this problem.", translated: "Si tú ___ (no fueras) tan terco, podríamos haber resuelto este problema.", options: ["weren't", "wasn't", "aren't"], correct: "weren't" },
+    { id: 28, text: "If I ___ (be) rich, I would donate to charity.", translated: "Si yo ___ (fuera) rico, donaría a la caridad.", options: ["were", "was", "am"], correct: "were" },
+    { id: 29, text: "If you ___ (tell) me earlier, I would have helped you.", translated: "Si tú ___ (me lo hubieras dicho) antes, te habría ayudado.", options: ["had told", "told", "tell"], correct: "had told" },
+    { id: 30, text: "If they ___ (not leave) so early, they wouldn't have missed the concert.", translated: "Si ellos ___ (no se hubieran ido) tan temprano, no habrían perdido el concierto.", options: ["hadn't left", "didn't leave", "left"], correct: "hadn't left" },
+    { id: 31, text: "If you ___ (ask) me for help, I would have given you advice.", translated: "Si tú ___ (me hubieras pedido) ayuda, te habría dado consejo.", options: ["had asked", "asked", "ask"], correct: "had asked" },
+    { id: 32, text: "If I ___ (speak) Spanish fluently, I would travel to Mexico.", translated: "Si yo ___ (hablara) español fluidamente, viajaría a México.", options: ["spoke", "speak", "speaks"], correct: "spoke" },
+    { id: 33, text: "If they ___ (be) more careful, they wouldn't have lost the key.", translated: "Si ellos ___ (hubieran sido) más cuidadosos, no habrían perdido la llave.", options: ["had been", "were", "was"], correct: "had been" },
+    { id: 34, text: "If we ___ (have) a bigger budget, we could have done more.", translated: "Si nosotros ___ (hubiéramos tenido) un presupuesto más grande, podríamos haber hecho más.", options: ["had had", "had", "have"], correct: "had" },
+    { id: 35, text: "If you ___ (work) harder, you would get promoted.", translated: "Si tú ___ (trabajaras) más duro, te ascenderían.", options: ["worked", "work", "works"], correct: "worked" },
+    { id: 36, text: "If I ___ (be) a better cook, I would prepare dinner tonight.", translated: "Si yo ___ (fuera) mejor cocinero, prepararía la cena esta noche.", options: ["were", "was", "am"], correct: "were" },
+    { id: 37, text: "If they ___ (be) more creative, they would come up with new ideas.", translated: "Si ellos ___ (fueran) más creativos, tendrían nuevas ideas.", options: ["were", "was", "are"], correct: "were" },
+    { id: 38, text: "If you ___ (offer) your help, she would appreciate it.", translated: "Si tú ___ (ofrecieras) tu ayuda, ella lo agradecería.", options: ["offered", "offers", "offer"], correct: "offered" },
+    { id: 39, text: "If I ___ (see) the accident, I would have helped.", translated: "Si yo ___ (hubiera visto) el accidente, habría ayudado.", options: ["had seen", "saw", "seen"], correct: "had seen" },
+    { id: 40, text: "If he ___ (ask) for my opinion, I would have said yes.", translated: "Si él ___ (me hubiera pedido) mi opinión, habría dicho que sí.", options: ["had asked", "asked", "ask"], correct: "had asked" },
+    { id: 41, text: "If you ___ (not make) so much noise, we could study.", translated: "Si tú ___ (no hicieras) tanto ruido, podríamos estudiar.", options: ["didn't make", "don't make", "made"], correct: "didn't make" },
+    { id: 42, text: "If I ___ (know) how to drive, I would take you to the airport.", translated: "Si yo ___ (supiera) conducir, te llevaría al aeropuerto.", options: ["knew", "know", "knows"], correct: "knew" },
+    { id: 43, text: "If we ___ (leave) earlier, we wouldn't have missed the flight.", translated: "Si nosotros ___ (hubiéramos salido) más temprano, no habríamos perdido el vuelo.", options: ["had left", "left", "have left"], correct: "had left" },
+    { id: 44, text: "If he ___ (not make) that mistake, we would have won the game.", translated: "Si él ___ (no hubiera cometido) ese error, habríamos ganado el juego.", options: ["hadn't made", "didn't make", "made"], correct: "hadn't made" },
+    { id: 45, text: "If I ___ (be) there, I would have helped you.", translated: "Si yo ___ (hubiera estado) allí, te habría ayudado.", options: ["had been", "was", "am"], correct: "had been" },
+    { id: 46, text: "If you ___ (read) the instructions, you wouldn't have had a problem.", translated: "Si tú ___ (hubieras leído) las instrucciones, no habrías tenido un problema.", options: ["had read", "read", "reads"], correct: "had read" },
+    { id: 47, text: "If she ___ (bring) her umbrella, she wouldn't be wet.", translated: "Si ella ___ (hubiera traído) su paraguas, no estaría mojada.", options: ["had brought", "brought", "bring"], correct: "had brought" },
+    { id: 48, text: "If I ___ (know) you were coming, I would have prepared a meal.", translated: "Si yo ___ (hubiera sabido) que venías, habría preparado una comida.", options: ["had known", "knew", "know"], correct: "had known" },
+    { id: 49, text: "If you ___ (speak) French, you could work in Paris.", translated: "Si tú ___ (hablaras) francés, podrías trabajar en París.", options: ["spoke", "speak", "speaks"], correct: "spoke" },
+    { id: 50, text: "If we ___ (not wait) for so long, we could have enjoyed the concert.", translated: "Si nosotros ___ (no hubiéramos esperado) tanto, podríamos haber disfrutado del concierto.", options: ["hadn't waited", "didn't wait", "waited"], correct: "hadn't waited" }
+];
+
+
+        const savedProgress = JSON.parse(localStorage.getItem(examKey)) || [];
+        let remainingQuestions = questions.filter(q => !savedProgress.includes(q.id));
+
+        const questionContainer = document.getElementById("question-container");
+        const questionText = document.getElementById("question-text");
+        const optionsContainer = document.getElementById("options-container");
+        const nextBtn = document.getElementById("next-btn");
+        const translateBtn = document.getElementById("translate-btn");
+
+        let isTranslated = false; 
+
+        function showRandomQuestion() {
+            if (remainingQuestions.length === 0) {
+                questionText.textContent = "¡Has completado el examen!";
+                optionsContainer.innerHTML = "";
+                nextBtn.style.display = "none";
+                translateBtn.style.display = "none"; 
+                localStorage.removeItem(examKey); 
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+            const currentQuestion = remainingQuestions[randomIndex];
+
+            questionText.textContent = currentQuestion.text;
+            isTranslated = false; 
+
+            optionsContainer.innerHTML = "";
+            currentQuestion.options.forEach(option => {
+                const label = document.createElement("label");
+                label.innerHTML = `<input type="radio" name="option" value="${option}"> ${option}`;
+                optionsContainer.appendChild(label);
+            });
+
+            translateBtn.onclick = () => {
+                if (isTranslated) {
+                    questionText.textContent = currentQuestion.text; 
+                } else {
+                    questionText.textContent = currentQuestion.translated; 
+                }
+                isTranslated = !isTranslated; 
+            };
+
+            nextBtn.onclick = () => {
+                const selectedOption = document.querySelector('input[name="option"]:checked');
+                if (!selectedOption) {
+                    alert("Por favor, selecciona una opción.");
+                    return;
+                }
+
+                const answer = selectedOption.value;
+                if (answer === currentQuestion.correct) {
+                    alert("Respuesta correcta.");
+                } else {
+                    alert(`Respuesta incorrecta. La respuesta correcta es: ${currentQuestion.correct}`);
+                }
+
+                savedProgress.push(currentQuestion.id);
+                localStorage.setItem(examKey, JSON.stringify(savedProgress));
+                remainingQuestions.splice(randomIndex, 1); 
+                showRandomQuestion(); 
+            };
+        }
+
+        showRandomQuestion();
+    </script>
+</body>
+</html>

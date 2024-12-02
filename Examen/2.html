@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 1: Must y Mustn't</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question-container {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #2a717e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1f5980;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .explanation {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .explanation h2 {
+            font-size: 22px;
+            color: #2a717e;
+            margin-bottom: 20px;
+        }
+        .explanation p, .explanation ul {
+            font-size: 16px;
+        }
+        .explanation ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+        .explanation li {
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #2a717e;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html">Inicio</a>
+    </nav><br><br><br>
+    
+    <h1>Examen 2: Should y shouldn't</h1>
+    <div class="question-container" id="question-container">
+        <p id="question-text">Loading question...</p>
+        <div class="options" id="options-container"></div>
+        <button id="next-btn">Siguiente</button>
+        <button id="translate-btn">Traducir</button>
+    </div>
+
+
+    <div class="explanation">
+        <h2>Explicación de "Should" y "Shouldn't"</h2>
+        <p><strong>"Should"</strong> se utiliza para dar una recomendación o sugerencia sobre lo que es lo mejor hacer. Por ejemplo:</p>
+        <ul>
+            <li><strong>You should eat more vegetables.</strong> (Deberías comer más verduras.)</li>
+            <li><strong>He should study harder for the exam.</strong> (Él debería estudiar más para el examen.)</li>
+        </ul>
+        <p><strong>"Shouldn't"</strong> se usa para indicar que algo no es lo mejor hacer o que no se recomienda. Por ejemplo:</p>
+        <ul>
+            <li><strong>You shouldn't eat too much sugar.</strong> (No deberías comer tanto azúcar.)</li>
+            <li><strong>She shouldn't stay up so late.</strong> (Ella no debería quedarse despierta hasta tan tarde.)</li>
+        </ul>
+        <p>Recuerda que "should" se usa para dar consejos o sugerencias, mientras que "shouldn't" se utiliza para decir que algo no es recomendable.</p>
+    </div>
+    
+    
+    
+
+    <script>
+        const examKey = "progreso_examen_2"; 
+        const questions = [
+    { id: 1, text: "She ___ go to the party later.", translated: "Ella ___ ir a la fiesta más tarde.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 2, text: "He is busy, but he ___ help us with the project.", translated: "Está ocupado, pero él ___ ayudarnos con el proyecto.", options: ["might", "maybe", "must"], correct: "might" },
+    { id: 3, text: "We ___ go to the beach if the weather improves.", translated: "___ ir a la playa si el clima mejora.", options: ["might", "maybe", "mustn't"], correct: "maybe" },
+    { id: 4, text: "I ___ have lunch with my friend tomorrow.", translated: "___ almorzar con mi amigo mañana.", options: ["maybe", "might", "must"], correct: "might" },
+    { id: 5, text: "They ___ be interested in joining the club.", translated: "___ estar interesados en unirse al club.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 6, text: "She ___ take a break after the meeting.", translated: "Ella ___ tomar un descanso después de la reunión.", options: ["might", "maybe", "should"], correct: "might" },
+    { id: 7, text: "We ___ visit the museum this weekend.", translated: "___ visitar el museo este fin de semana.", options: ["might", "maybe", "mustn't"], correct: "maybe" },
+    { id: 8, text: "I ___ go for a walk after work.", translated: "___ salir a caminar después del trabajo.", options: ["maybe", "might", "mustn't"], correct: "maybe" },
+    { id: 9, text: "They ___ bring their own food to the picnic.", translated: "___ traer su propia comida al picnic.", options: ["maybe", "might", "mustn't"], correct: "might" },
+    { id: 10, text: "She ___ be late for the meeting.", translated: "Ella ___ llegar tarde a la reunión.", options: ["might", "maybe", "must"], correct: "might" },
+    { id: 11, text: "I ___ see you at the concert tonight.", translated: "___ verte en el concierto esta noche.", options: ["maybe", "might", "mustn't"], correct: "maybe" },
+    { id: 12, text: "We ___ take the train instead of driving.", translated: "___ tomar el tren en lugar de conducir.", options: ["maybe", "might", "mustn't"], correct: "might" },
+    { id: 13, text: "It ___ rain later, so we should bring umbrellas.", translated: "___ llover más tarde, así que debemos traer paraguas.", options: ["might", "maybe", "should"], correct: "might" },
+    { id: 14, text: "She ___ call you when she arrives.", translated: "Ella ___ llamarte cuando llegue.", options: ["might", "maybe", "must"], correct: "might" },
+    { id: 15, text: "We ___ take a taxi if we miss the bus.", translated: "___ tomar un taxi si perdemos el autobús.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 16, text: "I ___ visit you next weekend.", translated: "___ visitarte el próximo fin de semana.", options: ["might", "maybe", "must"], correct: "maybe" },
+    { id: 17, text: "He ___ arrive early for the meeting.", translated: "Él ___ llegar temprano a la reunión.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 18, text: "They ___ join us for dinner if they finish work early.", translated: "___ unirse a nosotros para cenar si terminan el trabajo temprano.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 19, text: "I ___ go shopping tomorrow if I have time.", translated: "___ ir de compras mañana si tengo tiempo.", options: ["might", "maybe", "must"], correct: "might" },
+    { id: 20, text: "We ___ see a movie after dinner.", translated: "___ ver una película después de la cena.", options: ["maybe", "might", "mustn't"], correct: "maybe" },
+    { id: 21, text: "He ___ be at home now, but I'm not sure.", translated: "___ estar en casa ahora, pero no estoy seguro.", options: ["might", "maybe", "must"], correct: "might" },
+    { id: 22, text: "They ___ come to the party if they finish their work.", translated: "___ venir a la fiesta si terminan su trabajo.", options: ["maybe", "might", "should"], correct: "might" },
+    { id: 23, text: "She ___ join us for lunch tomorrow.", translated: "Ella ___ unirse a nosotros para almorzar mañana.", options: ["maybe", "might", "mustn't"], correct: "might" },
+    { id: 24, text: "We ___ leave early if the weather is bad.", translated: "___ salir temprano si el clima está malo.", options: ["maybe", "might", "mustn't"], correct: "might" },
+    { id: 25, text: "I ___ need your help with this task.", translated: "___ necesitar tu ayuda con esta tarea.", options: ["might", "maybe", "must"], correct: "might" },
+    { id: 26, text: "You ___ get a promotion soon.", translated: "___ recibir una promoción pronto.", options: ["maybe", "might", "mustn't"], correct: "might" },
+    { id: 27, text: "He ___ come to the office later, but it's not certain.", translated: "___ venir a la oficina más tarde, pero no es seguro.", options: ["maybe", "might", "must"], correct: "might" },
+    { id: 28, text: "We ___ get there by 6:00 PM if we leave now.", translated: "___ llegar a las 6:00 PM si salimos ahora.", options: ["maybe", "might", "mustn't"], correct: "might" },
+    { id: 29, text: "She ___ be sleeping by now.", translated: "Ella ___ estar durmiendo ahora.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 30, text: "They ___ have already left for the airport.", translated: "___ haber salido ya para el aeropuerto.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 31, text: "You ___ like this book; it’s really interesting.", translated: "___ gustarte este libro; es realmente interesante.", options: ["maybe", "might", "must"], correct: "might" },
+    { id: 32, text: "We ___ be able to help you tomorrow.", translated: "___ poder ayudarte mañana.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 33, text: "She ___ want to go out for dinner tonight.", translated: "Ella ___ querer salir a cenar esta noche.", options: ["might", "maybe", "must"], correct: "might" },
+    { id: 34, text: "I ___ try that new restaurant next week.", translated: "___ probar ese nuevo restaurante la próxima semana.", options: ["maybe", "might", "mustn't"], correct: "might" },
+    { id: 35, text: "They ___ offer discounts for early bookings.", translated: "___ ofrecer descuentos por reservaciones anticipadas.", options: ["might", "maybe", "must"], correct: "might" },
+    { id: 36, text: "You ___ want to take a jacket with you; it might get cold.", translated: "___ querer llevar una chaqueta contigo; podría hacer frío.", options: ["maybe", "might", "mustn't"], correct: "might" },
+    { id: 37, text: "He ___ be the right person for the job.", translated: "Él ___ ser la persona adecuada para el trabajo.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 38, text: "We ___ get a bonus this year, but it’s not guaranteed.", translated: "___ recibir un bono este año, pero no está garantizado.", options: ["maybe", "might", "must"], correct: "might" },
+    { id: 39, text: "She ___ be at the meeting, but I haven’t seen her yet.", translated: "Ella ___ estar en la reunión, pero aún no la he visto.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 40, text: "They ___ enjoy the movie, it’s a great one.", translated: "___ disfrutar la película, es excelente.", options: ["might", "maybe", "must"], correct: "might" },
+    { id: 41, text: "I ___ see you tomorrow if everything goes well.", translated: "___ verte mañana si todo sale bien.", options: ["maybe", "might", "mustn't"], correct: "might" },
+    { id: 42, text: "We ___ need to reschedule the meeting.", translated: "___ necesitar reprogramar la reunión.", options: ["might", "maybe", "must"], correct: "might" },
+    { id: 43, text: "She ___ have the answer, but I'm not sure.", translated: "Ella ___ tener la respuesta, pero no estoy seguro.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 44, text: "They ___ be coming to the event tonight.", translated: "___ venir al evento esta noche.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 45, text: "I ___ go to the gym later if I feel like it.", translated: "___ ir al gimnasio más tarde si tengo ganas.", options: ["maybe", "might", "mustn't"], correct: "maybe" },
+    { id: 46, text: "He ___ have forgotten to send the email.", translated: "Él ___ haber olvidado enviar el correo electrónico.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 47, text: "We ___ go for a run in the park if it's not too cold.", translated: "___ correr en el parque si no está demasiado frío.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 48, text: "She ___ like to join the team next year.", translated: "A ella ___ gustarle unirse al equipo el próximo año.", options: ["might", "maybe", "mustn't"], correct: "might" },
+    { id: 49, text: "I ___ go to the concert if I can get tickets.", translated: "___ ir al concierto si puedo conseguir entradas.", options: ["maybe", "might", "mustn't"], correct: "might" },
+    { id: 50, text: "They ___ be planning a surprise party for her.", translated: "___ estar planeando una fiesta sorpresa para ella.", options: ["might", "maybe", "mustn't"], correct: "might" }
+];
+
+
+
+        const savedProgress = JSON.parse(localStorage.getItem(examKey)) || [];
+        let remainingQuestions = questions.filter(q => !savedProgress.includes(q.id));
+
+        const questionContainer = document.getElementById("question-container");
+        const questionText = document.getElementById("question-text");
+        const optionsContainer = document.getElementById("options-container");
+        const nextBtn = document.getElementById("next-btn");
+        const translateBtn = document.getElementById("translate-btn");
+
+        let isTranslated = false; // Variable para controlar si la oración está traducida
+
+        function showRandomQuestion() {
+            if (remainingQuestions.length === 0) {
+                questionText.textContent = "¡Has completado el examen!";
+                optionsContainer.innerHTML = "";
+                nextBtn.style.display = "none";
+                translateBtn.style.display = "none"; // Ocultar el botón de traducir
+                localStorage.removeItem(examKey); 
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+            const currentQuestion = remainingQuestions[randomIndex];
+
+            // Mostrar la oración en inglés inicialmente
+            questionText.textContent = currentQuestion.text;
+            isTranslated = false; // Asegúrate de que no esté traducida al inicio
+
+            optionsContainer.innerHTML = "";
+            currentQuestion.options.forEach(option => {
+                const label = document.createElement("label");
+                label.innerHTML = `<input type="radio" name="option" value="${option}"> ${option}`;
+                optionsContainer.appendChild(label);
+            });
+
+            // Función para traducir la oración
+            translateBtn.onclick = () => {
+                if (isTranslated) {
+                    questionText.textContent = currentQuestion.text; // Mostrar en inglés
+                } else {
+                    questionText.textContent = currentQuestion.translated; // Mostrar en español
+                }
+                isTranslated = !isTranslated; // Alternar entre traducido y no traducido
+            };
+
+            nextBtn.onclick = () => {
+                const selectedOption = document.querySelector('input[name="option"]:checked');
+                if (!selectedOption) {
+                    alert("Por favor, selecciona una opción.");
+                    return;
+                }
+
+                const answer = selectedOption.value;
+                if (answer === currentQuestion.correct) {
+                    alert("Respuesta correcta.");
+                } else {
+                    alert(`Respuesta incorrecta. La respuesta correcta es: ${currentQuestion.correct}`);
+                }
+
+                savedProgress.push(currentQuestion.id);
+                localStorage.setItem(examKey, JSON.stringify(savedProgress));
+                remainingQuestions.splice(randomIndex, 1); 
+                showRandomQuestion(); 
+            };
+        }
+
+        showRandomQuestion();
+    </script>
+</body>
+</html>

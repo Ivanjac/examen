@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 1: Must y Mustn't</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question-container {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #2a717e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1f5980;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .explanation {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .explanation h2 {
+            font-size: 22px;
+            color: #2a717e;
+            margin-bottom: 20px;
+        }
+        .explanation p, .explanation ul {
+            font-size: 16px;
+        }
+        .explanation ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+        .explanation li {
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #2a717e;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+    </nav><br><br><br>
+    
+    <h1>Examen 9: Present perfect continuous    </h1>
+    <div class="question-container" id="question-container">
+        <p id="question-text">Loading question...</p>
+        <div class="options" id="options-container"></div>
+        <button id="next-btn">Siguiente</button>
+        <button id="translate-btn">Traducir</button>
+    </div>
+
+
+    <div class="explanation">
+        <h2>Explicación de "Present Perfect Continuous"</h2>
+        <p>El <strong>Present Perfect Continuous</strong> se utiliza para hablar sobre una acción que comenzó en el pasado y continúa en el presente o que acaba de terminar, pero con un énfasis en la duración de la acción. Se forma con el verbo <strong>have/has</strong> + <strong>been</strong> + el verbo en su forma de gerundio (verbo + -ing).</p>
+        
+        <h3>Fórmula:</h3>
+        <p><strong>have/has + been + verbo-ing</strong></p>
+    
+        <h3>Ejemplos:</h3>
+        <ul>
+            <li><strong>I have been studying for two hours.</strong> (He estado estudiando durante dos horas.)</li>
+            <li><strong>She has been working in this company for five years.</strong> (Ella ha estado trabajando en esta empresa durante cinco años.)</li>
+            <li><strong>They have been waiting for the bus since morning.</strong> (Ellos han estado esperando el autobús desde la mañana.)</li>
+        </ul>
+        
+        <h3>Usos comunes:</h3>
+        <p>El <strong>Present Perfect Continuous</strong> se usa para:</p>
+        <ul>
+            <li>Hablar de acciones que empezaron en el pasado y siguen ocurriendo en el presente.</li>
+            <li>Hablar de una acción que acaba de terminar pero cuyos efectos son visibles o importantes en el presente.</li>
+        </ul>
+    
+        <h3>Ejemplo con el uso de "since" y "for":</h3>
+        <ul>
+            <li><strong>She has been reading since 10 a.m.</strong> (Ella ha estado leyendo desde las 10 a.m.)</li>
+            <li><strong>I have been working here for three years.</strong> (He estado trabajando aquí durante tres años.)</li>
+        </ul>
+    
+        <p>Recuerda que, aunque se utiliza para hablar de la duración de la acción, este tiempo verbal no se utiliza con verbos de estado (como "know", "believe", "understand"), ya que no expresan una acción continua.</p>
+    
+        <h3>Ejemplo:</h3>
+        <ul>
+            <li><strong>I have been knowing him for many years.</strong> (Incorrecto)</li>
+            <li><strong>I have known him for many years.</strong> (Correcto)</li>
+        </ul>
+    </div>
+    
+
+    <script>
+        const examKey = "progreso_examen_9"; 
+        const questions = [
+    { id: 1, text: "I ___ (work) on this project for two weeks.", translated: "He ___ (trabajado) en este proyecto durante dos semanas.", options: ["have worked", "have been working", "worked"], correct: "have been working" },
+    { id: 2, text: "She ___ (study) English for three years.", translated: "Ella ___ (ha estado estudiando) inglés durante tres años.", options: ["has been studying", "has studied", "studied"], correct: "has been studying" },
+    { id: 3, text: "We ___ (wait) for you for an hour.", translated: "Nosotros ___ (hemos estado esperando) por ti durante una hora.", options: ["have been waiting", "have waited", "waited"], correct: "have been waiting" },
+    { id: 4, text: "They ___ (live) in this city since 2010.", translated: "Ellos ___ (han estado viviendo) en esta ciudad desde 2010.", options: ["have been living", "have lived", "lived"], correct: "have been living" },
+    { id: 5, text: "He ___ (play) football all afternoon.", translated: "Él ___ (ha estado jugando) fútbol toda la tarde.", options: ["has been playing", "has played", "played"], correct: "has been playing" },
+    { id: 6, text: "I ___ (learn) how to drive for a few months.", translated: "Yo ___ (he estado aprendiendo) a conducir durante unos meses.", options: ["have been learning", "have learned", "learned"], correct: "have been learning" },
+    { id: 7, text: "She ___ (work) at this company for five years.", translated: "Ella ___ (ha estado trabajando) en esta empresa durante cinco años.", options: ["has been working", "has worked", "worked"], correct: "has been working" },
+    { id: 8, text: "We ___ (wait) for the bus since 7 AM.", translated: "Nosotros ___ (hemos estado esperando) el autobús desde las 7 AM.", options: ["have been waiting", "have waited", "waited"], correct: "have been waiting" },
+    { id: 9, text: "I ___ (try) to call you all day.", translated: "He ___ (intentado) llamarte todo el día.", options: ["have been trying", "have tried", "tried"], correct: "have been trying" },
+    { id: 10, text: "They ___ (argue) about the project for the last hour.", translated: "Ellos ___ (han estado discutiendo) sobre el proyecto durante la última hora.", options: ["have been arguing", "have argued", "argued"], correct: "have been arguing" },
+    { id: 11, text: "She ___ (read) the book for over an hour.", translated: "Ella ___ (ha estado leyendo) el libro durante más de una hora.", options: ["has been reading", "has read", "read"], correct: "has been reading" },
+    { id: 12, text: "I ___ (look) for my keys all morning.", translated: "He ___ (estado buscando) mis llaves toda la mañana.", options: ["have been looking", "have looked", "looked"], correct: "have been looking" },
+    { id: 13, text: "We ___ (work) on this task for hours.", translated: "Nosotros ___ (hemos estado trabajando) en esta tarea durante horas.", options: ["have been working", "have worked", "worked"], correct: "have been working" },
+    { id: 14, text: "He ___ (feel) sick for a few days.", translated: "Él ___ (ha estado sintiéndose) enfermo durante algunos días.", options: ["has been feeling", "has felt", "felt"], correct: "has been feeling" },
+    { id: 15, text: "They ___ (talk) about the movie since noon.", translated: "Ellos ___ (han estado hablando) sobre la película desde el mediodía.", options: ["have been talking", "have talked", "talked"], correct: "have been talking" },
+    { id: 16, text: "I ___ (work) at the restaurant for the last month.", translated: "He ___ (trabajado) en el restaurante durante el último mes.", options: ["have been working", "have worked", "worked"], correct: "have been working" },
+    { id: 17, text: "She ___ (play) the guitar for several years.", translated: "Ella ___ (ha estado tocando) la guitarra durante varios años.", options: ["has been playing", "has played", "played"], correct: "has been playing" },
+    { id: 18, text: "We ___ (look) for a new house for a few months.", translated: "Nosotros ___ (hemos estado buscando) una nueva casa durante unos meses.", options: ["have been looking", "have looked", "looked"], correct: "have been looking" },
+    { id: 19, text: "I ___ (try) to fix the car all day.", translated: "He ___ (intentado) arreglar el coche todo el día.", options: ["have been trying", "have tried", "tried"], correct: "have been trying" },
+    { id: 20, text: "They ___ (wait) for the concert to start.", translated: "Ellos ___ (han estado esperando) que empiece el concierto.", options: ["have been waiting", "have waited", "waited"], correct: "have been waiting" },
+    { id: 21, text: "She ___ (paint) the house for two weeks.", translated: "Ella ___ (ha estado pintando) la casa durante dos semanas.", options: ["has been painting", "has painted", "painted"], correct: "has been painting" },
+    { id: 22, text: "I ___ (be) really busy with work lately.", translated: "He ___ (estado) realmente ocupado con el trabajo últimamente.", options: ["have been", "have been being", "was"], correct: "have been" },
+    { id: 23, text: "We ___ (exercise) every day this month.", translated: "Nosotros ___ (hemos estado haciendo ejercicio) todos los días este mes.", options: ["have been exercising", "have exercised", "exercised"], correct: "have been exercising" },
+    { id: 24, text: "They ___ (talk) to the teacher for an hour.", translated: "Ellos ___ (han estado hablando) con el profesor durante una hora.", options: ["have been talking", "have talked", "talked"], correct: "have been talking" },
+    { id: 25, text: "I ___ (read) the same book for the past few weeks.", translated: "He ___ (estado leyendo) el mismo libro durante las últimas semanas.", options: ["have been reading", "have read", "read"], correct: "have been reading" },
+    { id: 26, text: "He ___ (run) every morning for a month.", translated: "Él ___ (ha estado corriendo) todas las mañanas durante un mes.", options: ["has been running", "has run", "ran"], correct: "has been running" },
+    { id: 27, text: "She ___ (look) for a new job for a while.", translated: "Ella ___ (ha estado buscando) un nuevo trabajo durante un tiempo.", options: ["has been looking", "has looked", "looked"], correct: "has been looking" },
+    { id: 28, text: "I ___ (speak) to her for hours.", translated: "He ___ (hablado) con ella durante horas.", options: ["have been speaking", "have spoken", "spoke"], correct: "have been speaking" },
+    { id: 29, text: "We ___ (visit) a lot of places this year.", translated: "Nosotros ___ (hemos estado visitando) muchos lugares este año.", options: ["have been visiting", "have visited", "visited"], correct: "have been visiting" },
+    { id: 30, text: "They ___ (wait) for the train for 20 minutes.", translated: "Ellos ___ (han estado esperando) el tren durante 20 minutos.", options: ["have been waiting", "have waited", "waited"], correct: "have been waiting" },
+    { id: 31, text: "I ___ (study) for the exam all week.", translated: "He ___ (estado estudiando) para el examen toda la semana.", options: ["have been studying", "have studied", "studied"], correct: "have been studying" },
+    { id: 32, text: "She ___ (help) me with my homework for the last few days.", translated: "Ella ___ (me ha estado ayudando) con mi tarea durante los últimos días.", options: ["has been helping", "has helped", "helped"], correct: "has been helping" },
+    { id: 33, text: "I ___ (feel) very tired lately.", translated: "He ___ (me he estado sintiendo) muy cansado últimamente.", options: ["have been feeling", "have felt", "felt"], correct: "have been feeling" },
+    { id: 34, text: "They ___ (wait) for the movie to start.", translated: "Ellos ___ (han estado esperando) a que empiece la película.", options: ["have been waiting", "have waited", "waited"], correct: "have been waiting" },
+    { id: 35, text: "She ___ (work) on her novel for months.", translated: "Ella ___ (ha estado trabajando) en su novela durante meses.", options: ["has been working", "has worked", "worked"], correct: "has been working" },
+    { id: 36, text: "We ___ (look) for a new place to live.", translated: "Nosotros ___ (hemos estado buscando) un nuevo lugar donde vivir.", options: ["have been looking", "have looked", "looked"], correct: "have been looking" },
+    { id: 37, text: "I ___ (be) so busy with school recently.", translated: "He ___ (estado) tan ocupado con la escuela recientemente.", options: ["have been", "have been being", "was"], correct: "have been" },
+    { id: 38, text: "They ___ (work) hard on the project this month.", translated: "Ellos ___ (han estado trabajando) duro en el proyecto este mes.", options: ["have been working", "have worked", "worked"], correct: "have been working" },
+    { id: 39, text: "We ___ (exercise) at the gym for an hour.", translated: "Nosotros ___ (hemos estado haciendo ejercicio) en el gimnasio durante una hora.", options: ["have been exercising", "have exercised", "exercised"], correct: "have been exercising" },
+    { id: 40, text: "She ___ (study) for her final exams all week.", translated: "Ella ___ (ha estado estudiando) para sus exámenes finales toda la semana.", options: ["has been studying", "has studied", "studied"], correct: "has been studying" },
+    { id: 41, text: "I ___ (work) on a new project since last month.", translated: "He ___ (estado trabajando) en un nuevo proyecto desde el mes pasado.", options: ["have been working", "have worked", "worked"], correct: "have been working" },
+    { id: 42, text: "They ___ (talk) about the new policy for a while.", translated: "Ellos ___ (han estado hablando) sobre la nueva política durante un tiempo.", options: ["have been talking", "have talked", "talked"], correct: "have been talking" },
+    { id: 43, text: "I ___ (look) for my phone for two hours.", translated: "He ___ (estado buscando) mi teléfono durante dos horas.", options: ["have been looking", "have looked", "looked"], correct: "have been looking" },
+    { id: 44, text: "She ___ (travel) around Europe for the last year.", translated: "Ella ___ (ha estado viajando) por Europa durante el último año.", options: ["has been traveling", "has traveled", "traveled"], correct: "has been traveling" },
+    { id: 45, text: "We ___ (study) for the test this week.", translated: "Nosotros ___ (hemos estado estudiando) para el examen esta semana.", options: ["have been studying", "have studied", "studied"], correct: "have been studying" },
+    { id: 46, text: "I ___ (wait) for the doctor for 30 minutes.", translated: "He ___ (estado esperando) al doctor durante 30 minutos.", options: ["have been waiting", "have waited", "waited"], correct: "have been waiting" },
+    { id: 47, text: "They ___ (practice) the piano for an hour.", translated: "Ellos ___ (han estado practicando) el piano durante una hora.", options: ["have been practicing", "have practiced", "practiced"], correct: "have been practicing" },
+    { id: 48, text: "She ___ (look) for her keys all morning.", translated: "Ella ___ (ha estado buscando) sus llaves toda la mañana.", options: ["has been looking", "has looked", "looked"], correct: "has been looking" },
+    { id: 49, text: "I ___ (be) to the gym every day this week.", translated: "He ___ (estado) al gimnasio todos los días esta semana.", options: ["have been", "have been being", "was"], correct: "have been" },
+    { id: 50, text: "We ___ (visit) the museum for the last hour.", translated: "Nosotros ___ (hemos estado visitando) el museo durante la última hora.", options: ["have been visiting", "have visited", "visited"], correct: "have been visiting" }
+];
+
+
+
+        const savedProgress = JSON.parse(localStorage.getItem(examKey)) || [];
+        let remainingQuestions = questions.filter(q => !savedProgress.includes(q.id));
+
+        const questionContainer = document.getElementById("question-container");
+        const questionText = document.getElementById("question-text");
+        const optionsContainer = document.getElementById("options-container");
+        const nextBtn = document.getElementById("next-btn");
+        const translateBtn = document.getElementById("translate-btn");
+
+        let isTranslated = false; 
+
+        function showRandomQuestion() {
+            if (remainingQuestions.length === 0) {
+                questionText.textContent = "¡Has completado el examen!";
+                optionsContainer.innerHTML = "";
+                nextBtn.style.display = "none";
+                translateBtn.style.display = "none"; 
+                localStorage.removeItem(examKey); 
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+            const currentQuestion = remainingQuestions[randomIndex];
+
+            questionText.textContent = currentQuestion.text;
+            isTranslated = false; 
+
+            optionsContainer.innerHTML = "";
+            currentQuestion.options.forEach(option => {
+                const label = document.createElement("label");
+                label.innerHTML = `<input type="radio" name="option" value="${option}"> ${option}`;
+                optionsContainer.appendChild(label);
+            });
+
+            translateBtn.onclick = () => {
+                if (isTranslated) {
+                    questionText.textContent = currentQuestion.text; 
+                } else {
+                    questionText.textContent = currentQuestion.translated; 
+                }
+                isTranslated = !isTranslated; 
+            };
+
+            nextBtn.onclick = () => {
+                const selectedOption = document.querySelector('input[name="option"]:checked');
+                if (!selectedOption) {
+                    alert("Por favor, selecciona una opción.");
+                    return;
+                }
+
+                const answer = selectedOption.value;
+                if (answer === currentQuestion.correct) {
+                    alert("Respuesta correcta.");
+                } else {
+                    alert(`Respuesta incorrecta. La respuesta correcta es: ${currentQuestion.correct}`);
+                }
+
+                savedProgress.push(currentQuestion.id);
+                localStorage.setItem(examKey, JSON.stringify(savedProgress));
+                remainingQuestions.splice(randomIndex, 1); 
+                showRandomQuestion(); 
+            };
+        }
+
+        showRandomQuestion();
+    </script>
+</body>
+</html>

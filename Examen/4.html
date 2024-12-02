@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 1: Must y Mustn't</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question-container {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #2a717e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1f5980;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .explanation {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .explanation h2 {
+            font-size: 22px;
+            color: #2a717e;
+            margin-bottom: 20px;
+        }
+        .explanation p, .explanation ul {
+            font-size: 16px;
+        }
+        .explanation ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+        .explanation li {
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #2a717e;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Inicio</a>
+    </nav><br><br><br>
+    
+    <h1>Examen 4: Simple past</h1>
+    <div class="question-container" id="question-container">
+        <p id="question-text">Loading question...</p>
+        <div class="options" id="options-container"></div>
+        <button id="next-btn">Siguiente</button>
+        <button id="translate-btn">Traducir</button>
+    </div>
+
+
+    <div class="explanation">
+        <h2>Explicación de "Simple Past"</h2>
+        <p><strong>"Simple Past"</strong> se utiliza para hablar de acciones que ocurrieron en el pasado y que ya han finalizado. Se utiliza con verbos en su forma pasada. Por ejemplo:</p>
+        <ul>
+            <li><strong>I visited my grandparents last weekend.</strong> (Visité a mis abuelos el fin de semana pasado.)</li>
+            <li><strong>She studied for the exam yesterday.</strong> (Ella estudió para el examen ayer.)</li>
+        </ul>
+        <p>Para formar oraciones afirmativas en "Simple Past", se agrega la terminación <strong>-ed</strong> al verbo regular. Por ejemplo:</p>
+        <ul>
+            <li><strong>He worked all day.</strong> (Él trabajó todo el día.)</li>
+            <li><strong>They played football in the park.</strong> (Jugaron al fútbol en el parque.)</li>
+        </ul>
+        <p>Los verbos irregulares tienen formas específicas en el "Simple Past", como:</p>
+        <ul>
+            <li><strong>I went to the store yesterday.</strong> (Fui a la tienda ayer.)</li>
+            <li><strong>She saw a movie last night.</strong> (Ella vio una película anoche.)</li>
+        </ul>
+        <p>Recuerda que el "Simple Past" se usa para eventos que ya han sucedido y que no tienen conexión con el presente.</p>
+    </div>
+    
+    
+
+    <script>
+        const examKey = "progreso_examen_4"; 
+        const questions = [
+    { id: 1, text: "I ___ (buy) a new car last week.", translated: "Yo ___ (compré) un coche la semana pasada.", options: ["buy", "bought", "buys"], correct: "bought" },
+    { id: 2, text: "She ___ (go) to the park yesterday.", translated: "Ella ___ (fue) al parque ayer.", options: ["went", "goes", "gone"], correct: "went" },
+    { id: 3, text: "We ___ (see) a great movie last night.", translated: "Nosotros ___ (vimos) una gran película anoche.", options: ["saw", "see", "sees"], correct: "saw" },
+    { id: 4, text: "They ___ (eat) dinner at 8 PM.", translated: "Ellos ___ (comieron) la cena a las 8 PM.", options: ["ate", "eats", "eat"], correct: "ate" },
+    { id: 5, text: "He ___ (play) football yesterday.", translated: "Él ___ (jugó) al fútbol ayer.", options: ["played", "play", "plays"], correct: "played" },
+    { id: 6, text: "I ___ (visit) my grandmother last weekend.", translated: "Yo ___ (visité) a mi abuela el fin de semana pasado.", options: ["visited", "visit", "visits"], correct: "visited" },
+    { id: 7, text: "She ___ (read) an interesting book last week.", translated: "Ella ___ (leyó) un libro interesante la semana pasada.", options: ["read", "reads", "readed"], correct: "read" },
+    { id: 8, text: "We ___ (walk) in the park on Sunday.", translated: "Nosotros ___ (caminamos) en el parque el domingo.", options: ["walked", "walk", "walking"], correct: "walked" },
+    { id: 9, text: "They ___ (have) a party last Friday.", translated: "Ellos ___ (tuvieron) una fiesta el viernes pasado.", options: ["had", "have", "has"], correct: "had" },
+    { id: 10, text: "I ___ (finish) my homework at 9 PM.", translated: "Yo ___ (terminé) mi tarea a las 9 PM.", options: ["finished", "finish", "finishes"], correct: "finished" },
+    { id: 11, text: "We ___ (travel) to Paris last summer.", translated: "Nosotros ___ (viajamos) a París el verano pasado.", options: ["traveled", "travel", "travels"], correct: "traveled" },
+    { id: 12, text: "He ___ (take) a lot of photos during the trip.", translated: "Él ___ (tomó) muchas fotos durante el viaje.", options: ["took", "takes", "taken"], correct: "took" },
+    { id: 13, text: "She ___ (speak) to her friend on the phone yesterday.", translated: "Ella ___ (habló) con su amiga por teléfono ayer.", options: ["spoke", "speak", "speaks"], correct: "spoke" },
+    { id: 14, text: "They ___ (clean) the house on Saturday.", translated: "Ellos ___ (limpiaron) la casa el sábado.", options: ["cleaned", "clean", "cleans"], correct: "cleaned" },
+    { id: 15, text: "We ___ (buy) some souvenirs in the market.", translated: "Nosotros ___ (compramos) algunos recuerdos en el mercado.", options: ["bought", "buy", "buys"], correct: "bought" },
+    { id: 16, text: "I ___ (study) for the exam last night.", translated: "Yo ___ (estudié) para el examen anoche.", options: ["studied", "study", "studies"], correct: "studied" },
+    { id: 17, text: "She ___ (write) a letter to her grandmother last week.", translated: "Ella ___ (escribió) una carta a su abuela la semana pasada.", options: ["wrote", "write", "writes"], correct: "wrote" },
+    { id: 18, text: "We ___ (watch) a movie at the cinema.", translated: "Nosotros ___ (vimos) una película en el cine.", options: ["watched", "watch", "watches"], correct: "watched" },
+    { id: 19, text: "He ___ (learn) how to drive last year.", translated: "Él ___ (aprendió) a conducir el año pasado.", options: ["learned", "learn", "learns"], correct: "learned" },
+    { id: 20, text: "They ___ (live) in Madrid for 5 years.", translated: "Ellos ___ (vivieron) en Madrid durante 5 años.", options: ["lived", "live", "lives"], correct: "lived" },
+    { id: 21, text: "I ___ (work) at the office all day yesterday.", translated: "Yo ___ (trabajé) en la oficina todo el día ayer.", options: ["worked", "work", "works"], correct: "worked" },
+    { id: 22, text: "We ___ (enjoy) our vacation last month.", translated: "Nosotros ___ (disfrutamos) nuestras vacaciones el mes pasado.", options: ["enjoyed", "enjoy", "enjoys"], correct: "enjoyed" },
+    { id: 23, text: "He ___ (forget) his keys at home this morning.", translated: "Él ___ (olvidó) sus llaves en casa esta mañana.", options: ["forgot", "forgets", "forget"], correct: "forgot" },
+    { id: 24, text: "I ___ (call) you last night, but you didn’t answer.", translated: "Yo ___ (te llamé) anoche, pero no contestaste.", options: ["called", "call", "calls"], correct: "called" },
+    { id: 25, text: "She ___ (buy) a new dress for the party.", translated: "Ella ___ (compró) un vestido nuevo para la fiesta.", options: ["bought", "buy", "buys"], correct: "bought" },
+    { id: 26, text: "We ___ (eat) pizza last Friday.", translated: "Nosotros ___ (comimos) pizza el viernes pasado.", options: ["ate", "eat", "eats"], correct: "ate" },
+    { id: 27, text: "They ___ (arrive) late to the meeting.", translated: "Ellos ___ (llegaron) tarde a la reunión.", options: ["arrived", "arrive", "arrives"], correct: "arrived" },
+    { id: 28, text: "He ___ (visit) his friend in the hospital.", translated: "Él ___ (visitó) a su amigo en el hospital.", options: ["visited", "visit", "visits"], correct: "visited" },
+    { id: 29, text: "I ___ (meet) a lot of interesting people during my trip.", translated: "Yo ___ (conocí) a muchas personas interesantes durante mi viaje.", options: ["met", "meet", "meets"], correct: "met" },
+    { id: 30, text: "She ___ (help) me with my homework yesterday.", translated: "Ella ___ (me ayudó) con mi tarea ayer.", options: ["helped", "help", "helps"], correct: "helped" },
+    { id: 31, text: "They ___ (clean) the house before the guests arrived.", translated: "Ellos ___ (limpiaron) la casa antes de que llegaran los invitados.", options: ["cleaned", "clean", "cleans"], correct: "cleaned" },
+    { id: 32, text: "We ___ (cook) a big meal for dinner last night.", translated: "Nosotros ___ (cocinamos) una gran comida para la cena anoche.", options: ["cooked", "cook", "cooks"], correct: "cooked" },
+    { id: 33, text: "I ___ (find) my wallet in the park.", translated: "Yo ___ (encontré) mi billetera en el parque.", options: ["found", "find", "finds"], correct: "found" },
+    { id: 34, text: "She ___ (travel) to London last year.", translated: "Ella ___ (viajó) a Londres el año pasado.", options: ["traveled", "travel", "travels"], correct: "traveled" },
+    { id: 35, text: "We ___ (have) a great time at the beach last weekend.", translated: "Nosotros ___ (tuvimos) un gran tiempo en la playa el fin de semana pasado.", options: ["had", "have", "has"], correct: "had" },
+    { id: 36, text: "I ___ (take) a lot of photos during my vacation.", translated: "Yo ___ (tomé) muchas fotos durante mis vacaciones.", options: ["took", "takes", "take"], correct: "took" },
+    { id: 37, text: "They ___ (finish) their work before the deadline.", translated: "Ellos ___ (terminaron) su trabajo antes de la fecha límite.", options: ["finished", "finish", "finishes"], correct: "finished" },
+    { id: 38, text: "She ___ (clean) her room yesterday.", translated: "Ella ___ (limpió) su habitación ayer.", options: ["cleaned", "clean", "cleans"], correct: "cleaned" },
+    { id: 39, text: "I ___ (sing) a song at the party.", translated: "Yo ___ (canté) una canción en la fiesta.", options: ["sang", "sings", "sing"], correct: "sang" },
+    { id: 40, text: "He ___ (sleep) for 8 hours last night.", translated: "Él ___ (durmió) durante 8 horas anoche.", options: ["slept", "sleep", "sleeps"], correct: "slept" },
+    { id: 41, text: "They ___ (run) in the marathon last weekend.", translated: "Ellos ___ (corrieron) en el maratón el fin de semana pasado.", options: ["ran", "run", "runs"], correct: "ran" },
+    { id: 42, text: "We ___ (watch) the game on TV last night.", translated: "Nosotros ___ (vimos) el partido en la televisión anoche.", options: ["watched", "watch", "watches"], correct: "watched" },
+    { id: 43, text: "She ___ (learn) a new language last year.", translated: "Ella ___ (aprendió) un nuevo idioma el año pasado.", options: ["learned", "learn", "learns"], correct: "learned" },
+    { id: 44, text: "I ___ (find) a great restaurant downtown.", translated: "Yo ___ (encontré) un gran restaurante en el centro.", options: ["found", "find", "finds"], correct: "found" },
+    { id: 45, text: "They ___ (have) a wonderful time on their vacation.", translated: "Ellos ___ (tuvieron) un tiempo maravilloso en sus vacaciones.", options: ["had", "have", "has"], correct: "had" },
+    { id: 46, text: "I ___ (see) a great concert last weekend.", translated: "Yo ___ (vi) un gran concierto el fin de semana pasado.", options: ["saw", "see", "sees"], correct: "saw" },
+    { id: 47, text: "We ___ (visit) the museum last month.", translated: "Nosotros ___ (visitamos) el museo el mes pasado.", options: ["visited", "visit", "visits"], correct: "visited" },
+    { id: 48, text: "She ___ (buy) a gift for her friend’s birthday.", translated: "Ella ___ (compró) un regalo para el cumpleaños de su amiga.", options: ["bought", "buy", "buys"], correct: "bought" },
+    { id: 49, text: "I ___ (finish) reading the book yesterday.", translated: "Yo ___ (terminé) de leer el libro ayer.", options: ["finished", "finish", "finishes"], correct: "finished" },
+    { id: 50, text: "They ___ (study) all night for the test.", translated: "Ellos ___ (estudiaron) toda la noche para el examen.", options: ["studied", "study", "studies"], correct: "studied" }
+];
+
+
+        const savedProgress = JSON.parse(localStorage.getItem(examKey)) || [];
+        let remainingQuestions = questions.filter(q => !savedProgress.includes(q.id));
+
+        const questionContainer = document.getElementById("question-container");
+        const questionText = document.getElementById("question-text");
+        const optionsContainer = document.getElementById("options-container");
+        const nextBtn = document.getElementById("next-btn");
+        const translateBtn = document.getElementById("translate-btn");
+
+        let isTranslated = false; 
+
+        function showRandomQuestion() {
+            if (remainingQuestions.length === 0) {
+                questionText.textContent = "¡Has completado el examen!";
+                optionsContainer.innerHTML = "";
+                nextBtn.style.display = "none";
+                translateBtn.style.display = "none"; 
+                localStorage.removeItem(examKey); 
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+            const currentQuestion = remainingQuestions[randomIndex];
+
+            questionText.textContent = currentQuestion.text;
+            isTranslated = false; 
+
+            optionsContainer.innerHTML = "";
+            currentQuestion.options.forEach(option => {
+                const label = document.createElement("label");
+                label.innerHTML = `<input type="radio" name="option" value="${option}"> ${option}`;
+                optionsContainer.appendChild(label);
+            });
+
+            translateBtn.onclick = () => {
+                if (isTranslated) {
+                    questionText.textContent = currentQuestion.text; 
+                } else {
+                    questionText.textContent = currentQuestion.translated; 
+                }
+                isTranslated = !isTranslated; 
+            };
+
+            nextBtn.onclick = () => {
+                const selectedOption = document.querySelector('input[name="option"]:checked');
+                if (!selectedOption) {
+                    alert("Por favor, selecciona una opción.");
+                    return;
+                }
+
+                const answer = selectedOption.value;
+                if (answer === currentQuestion.correct) {
+                    alert("Respuesta correcta.");
+                } else {
+                    alert(`Respuesta incorrecta. La respuesta correcta es: ${currentQuestion.correct}`);
+                }
+
+                savedProgress.push(currentQuestion.id);
+                localStorage.setItem(examKey, JSON.stringify(savedProgress));
+                remainingQuestions.splice(randomIndex, 1); 
+                showRandomQuestion(); 
+            };
+        }
+
+        showRandomQuestion();
+    </script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 1: Must y Mustn't</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question-container {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #2a717e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1f5980;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .explanation {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .explanation h2 {
+            font-size: 22px;
+            color: #2a717e;
+            margin-bottom: 20px;
+        }
+        .explanation p, .explanation ul {
+            font-size: 16px;
+        }
+        .explanation ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+        .explanation li {
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #2a717e;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+    </nav><br><br><br>
+    
+    <h1>Examen 7: Third conditional    </h1>
+    <div class="question-container" id="question-container">
+        <p id="question-text">Loading question...</p>
+        <div class="options" id="options-container"></div>
+        <button id="next-btn">Siguiente</button>
+        <button id="translate-btn">Traducir</button>
+    </div>
+
+
+    <div class="explanation">
+        <h2>Explicación de "Third Conditional"</h2>
+        <p><strong>"Third Conditional"</strong> se utiliza para hablar de situaciones hipotéticas en el pasado que no ocurrieron. Este tipo de condicional expresa arrepentimiento o suposiciones sobre lo que podría haber sido diferente si algo hubiera ocurrido de otra manera.</p>
+        <p>Se forma utilizando la estructura:</p>
+        <ul>
+            <li><strong>If + past perfect, + would have + past participle.</strong></li>
+        </ul>
+        <p>Por ejemplo:</p>
+        <ul>
+            <li><strong>If I had studied harder, I would have passed the exam.</strong> (Si hubiera estudiado más, habría aprobado el examen.)</li>
+            <li><strong>If they had known about the party, they would have come.</strong> (Si ellos hubieran sabido sobre la fiesta, habrían venido.)</li>
+        </ul>
+        <p>El <strong>Third Conditional</strong> se usa para expresar situaciones que no ocurrieron en el pasado y que no pueden cambiarse. La cláusula condicional está en <strong>past perfect</strong>, y la acción principal está en la forma <strong>would have + past participle</strong>.</p>
+        <p>Este condicional se refiere a algo que podría haber pasado en el pasado, pero que no ocurrió. Se usa cuando se expresa arrepentimiento o la idea de que algo podría haber sido diferente si las circunstancias hubieran cambiado.</p>
+        <p>Ejemplo adicional:</p>
+        <ul>
+            <li><strong>If she had left earlier, she would have caught the train.</strong> (Si ella hubiera salido antes, habría tomado el tren.)</li>
+        </ul>
+    </div>
+    
+    <script>
+        const examKey = "progreso_examen_7"; 
+        const questions = [
+    { id: 1, text: "If I ___ (know) about the traffic, I would have left earlier.", translated: "Si yo ___ (hubiera sabido) sobre el tráfico, habría salido más temprano.", options: ["had known", "knew", "knows"], correct: "had known" },
+    { id: 2, text: "If she ___ (study) more, she would have passed the exam.", translated: "Si ella ___ (hubiera estudiado) más, habría aprobado el examen.", options: ["had studied", "studied", "study"], correct: "had studied" },
+    { id: 3, text: "If we ___ (not miss) the bus, we would have been on time.", translated: "Si nosotros ___ (no hubiéramos perdido) el autobús, habríamos llegado a tiempo.", options: ["hadn't missed", "didn't miss", "missed"], correct: "hadn't missed" },
+    { id: 4, text: "If they ___ (invite) us to the party, we would have gone.", translated: "Si ellos ___ (nos hubieran invitado) a la fiesta, habríamos ido.", options: ["had invited", "invited", "invite"], correct: "had invited" },
+    { id: 5, text: "If I ___ (not eat) so much, I wouldn't have felt sick.", translated: "Si yo ___ (no hubiera comido) tanto, no me habría sentido enfermo.", options: ["hadn't eaten", "didn't eat", "ate"], correct: "hadn't eaten" },
+    { id: 6, text: "If you ___ (tell) me the truth, I would have believed you.", translated: "Si tú ___ (me hubieras dicho) la verdad, te habría creído.", options: ["had told", "told", "tell"], correct: "had told" },
+    { id: 7, text: "If I ___ (be) more careful, I wouldn't have broken the vase.", translated: "Si yo ___ (hubiera sido) más cuidadoso, no habría roto el jarrón.", options: ["had been", "was", "am"], correct: "had been" },
+    { id: 8, text: "If you ___ (study) harder, you would have passed the test.", translated: "Si tú ___ (hubieras estudiado) más, habrías aprobado el examen.", options: ["had studied", "studied", "study"], correct: "had studied" },
+    { id: 9, text: "If I ___ (know) she was in town, I would have called her.", translated: "Si yo ___ (hubiera sabido) que ella estaba en la ciudad, la habría llamado.", options: ["had known", "knew", "knows"], correct: "had known" },
+    { id: 10, text: "If they ___ (not leave) so late, they would have caught the train.", translated: "Si ellos ___ (no se hubieran ido) tan tarde, habrían alcanzado el tren.", options: ["hadn't left", "didn't leave", "left"], correct: "hadn't left" },
+    { id: 11, text: "If we ___ (buy) the tickets earlier, we would have gotten better seats.", translated: "Si nosotros ___ (hubiéramos comprado) los boletos antes, habríamos obtenido mejores asientos.", options: ["had bought", "bought", "buy"], correct: "had bought" },
+    { id: 12, text: "If you ___ (not forget) to send the email, we would have finished the task.", translated: "Si tú ___ (no hubieras olvidado) enviar el correo, habríamos terminado la tarea.", options: ["hadn't forgotten", "didn't forget", "forgot"], correct: "hadn't forgotten" },
+    { id: 13, text: "If I ___ (bring) my umbrella, I wouldn't have gotten wet.", translated: "Si yo ___ (hubiera traído) mi paraguas, no me habría mojado.", options: ["had brought", "brought", "bring"], correct: "had brought" },
+    { id: 14, text: "If he ___ (not forget) his keys, he would have been able to get in.", translated: "Si él ___ (no hubiera olvidado) sus llaves, habría podido entrar.", options: ["hadn't forgotten", "didn't forget", "forgot"], correct: "hadn't forgotten" },
+    { id: 15, text: "If we ___ (arrive) on time, we wouldn't have missed the beginning of the show.", translated: "Si nosotros ___ (hubiéramos llegado) a tiempo, no habríamos perdido el comienzo del espectáculo.", options: ["had arrived", "arrived", "arrive"], correct: "had arrived" },
+    { id: 16, text: "If you ___ (ask) for help, we would have solved the problem earlier.", translated: "Si tú ___ (hubieras pedido) ayuda, habríamos resuelto el problema antes.", options: ["had asked", "asked", "ask"], correct: "had asked" },
+    { id: 17, text: "If I ___ (know) it was your birthday, I would have bought you a gift.", translated: "Si yo ___ (hubiera sabido) que era tu cumpleaños, te habría comprado un regalo.", options: ["had known", "knew", "know"], correct: "had known" },
+    { id: 18, text: "If she ___ (tell) me about her plans, I would have joined her.", translated: "Si ella ___ (me hubiera contado) sobre sus planes, me habría unido a ella.", options: ["had told", "told", "tell"], correct: "had told" },
+    { id: 19, text: "If I ___ (not be) so tired, I would have gone to the concert.", translated: "Si yo ___ (no hubiera estado) tan cansado, habría ido al concierto.", options: ["hadn't been", "wasn't", "am not"], correct: "hadn't been" },
+    { id: 20, text: "If you ___ (be) more careful, you wouldn't have broken the vase.", translated: "Si tú ___ (hubieras sido) más cuidadoso, no habrías roto el jarrón.", options: ["had been", "were", "was"], correct: "had been" },
+    { id: 21, text: "If we ___ (arrive) earlier, we wouldn't have had to wait in line.", translated: "Si nosotros ___ (hubiéramos llegado) más temprano, no habríamos tenido que esperar en la fila.", options: ["had arrived", "arrived", "arrive"], correct: "had arrived" },
+    { id: 22, text: "If they ___ (take) the correct route, they would have avoided the accident.", translated: "Si ellos ___ (hubieran tomado) la ruta correcta, habrían evitado el accidente.", options: ["had taken", "took", "take"], correct: "had taken" },
+    { id: 23, text: "If I ___ (not lose) my wallet, I would have had enough money.", translated: "Si yo ___ (no hubiera perdido) mi billetera, habría tenido suficiente dinero.", options: ["hadn't lost", "didn't lose", "lost"], correct: "hadn't lost" },
+    { id: 24, text: "If we ___ (leave) earlier, we would have arrived before the movie started.", translated: "Si nosotros ___ (hubiéramos salido) más temprano, habríamos llegado antes de que empezara la película.", options: ["had left", "left", "leave"], correct: "had left" },
+    { id: 25, text: "If you ___ (call) me, I would have helped you.", translated: "Si tú ___ (me hubieras llamado), te habría ayudado.", options: ["had called", "called", "call"], correct: "had called" },
+    { id: 26, text: "If I ___ (not spill) my drink, I wouldn't have ruined the carpet.", translated: "Si yo ___ (no hubiera derramado) mi bebida, no habría arruinado la alfombra.", options: ["hadn't spilled", "didn't spill", "spilled"], correct: "hadn't spilled" },
+    { id: 27, text: "If you ___ (give) me the right directions, I wouldn't have gotten lost.", translated: "Si tú ___ (me hubieras dado) las direcciones correctas, no me habría perdido.", options: ["had given", "gave", "give"], correct: "had given" },
+    { id: 28, text: "If we ___ (bring) more food, we would have had enough for everyone.", translated: "Si nosotros ___ (hubiéramos traído) más comida, habría habido suficiente para todos.", options: ["had brought", "brought", "bring"], correct: "had brought" },
+    { id: 29, text: "If I ___ (not go) to bed so late, I wouldn't have been tired today.", translated: "Si yo ___ (no me hubiera ido) a la cama tan tarde, no estaría cansado hoy.", options: ["hadn't gone", "didn't go", "went"], correct: "hadn't gone" },
+    { id: 30, text: "If you ___ (not cancel) the meeting, we would have discussed the issue.", translated: "Si tú ___ (no hubieras cancelado) la reunión, habríamos discutido el tema.", options: ["hadn't canceled", "didn't cancel", "canceled"], correct: "hadn't canceled" },
+    { id: 31, text: "If we ___ (get) the package yesterday, we would have been able to finish the project.", translated: "Si nosotros ___ (hubiéramos recibido) el paquete ayer, habríamos podido terminar el proyecto.", options: ["had gotten", "got", "get"], correct: "had gotten" },
+    { id: 32, text: "If you ___ (not drink) so much coffee, you wouldn't have had trouble sleeping.", translated: "Si tú ___ (no hubieras bebido) tanto café, no habrías tenido problemas para dormir.", options: ["hadn't drunk", "didn't drink", "drank"], correct: "hadn't drunk" },
+    { id: 33, text: "If she ___ (not make) that mistake, she would have passed the test.", translated: "Si ella ___ (no hubiera cometido) ese error, habría pasado el examen.", options: ["hadn't made", "didn't make", "made"], correct: "hadn't made" },
+    { id: 34, text: "If I ___ (not forget) to charge my phone, I could have called you.", translated: "Si yo ___ (no hubiera olvidado) cargar mi teléfono, podría haberte llamado.", options: ["hadn't forgotten", "didn't forget", "forgot"], correct: "hadn't forgotten" },
+    { id: 35, text: "If you ___ (help) me, I would have finished the task on time.", translated: "Si tú ___ (me hubieras ayudado), habría terminado la tarea a tiempo.", options: ["had helped", "helped", "help"], correct: "had helped" },
+    { id: 36, text: "If we ___ (not run) out of time, we would have done more activities.", translated: "Si nosotros ___ (no hubiéramos quedado) sin tiempo, habríamos hecho más actividades.", options: ["hadn't run", "didn't run", "ran"], correct: "hadn't run" },
+    { id: 37, text: "If they ___ (listen) to my advice, they would have avoided the problem.", translated: "Si ellos ___ (me hubieran escuchado) mi consejo, habrían evitado el problema.", options: ["had listened", "listened", "listen"], correct: "had listened" },
+    { id: 38, text: "If I ___ (not lose) my wallet, I could have bought the tickets.", translated: "Si yo ___ (no hubiera perdido) mi billetera, habría podido comprar los boletos.", options: ["hadn't lost", "didn't lose", "lost"], correct: "hadn't lost" },
+    { id: 39, text: "If she ___ (call) me, I would have been able to help.", translated: "Si ella ___ (me hubiera llamado), habría podido ayudar.", options: ["had called", "called", "call"], correct: "had called" },
+    { id: 40, text: "If we ___ (not be) in a rush, we would have had time for coffee.", translated: "Si nosotros ___ (no hubiéramos estado) apurados, habríamos tenido tiempo para un café.", options: ["hadn't been", "weren't", "were"], correct: "hadn't been" },
+    { id: 41, text: "If they ___ (wait) a little longer, they would have seen the ending.", translated: "Si ellos ___ (hubieran esperado) un poco más, habrían visto el final.", options: ["had waited", "waited", "wait"], correct: "had waited" },
+    { id: 42, text: "If I ___ (not make) that decision, I would have been happier.", translated: "Si yo ___ (no hubiera tomado) esa decisión, habría sido más feliz.", options: ["hadn't made", "didn't make", "made"], correct: "hadn't made" },
+    { id: 43, text: "If we ___ (arrive) a bit earlier, we could have seen the whole match.", translated: "Si nosotros ___ (hubiéramos llegado) un poco más temprano, habríamos podido ver todo el partido.", options: ["had arrived", "arrived", "arrive"], correct: "had arrived" },
+    { id: 44, text: "If you ___ (not spill) your drink, you would have enjoyed the party.", translated: "Si tú ___ (no hubieras derramado) tu bebida, habrías disfrutado de la fiesta.", options: ["hadn't spilled", "didn't spill", "spilled"], correct: "hadn't spilled" },
+    { id: 45, text: "If he ___ (understand) the rules, he wouldn't have lost the game.", translated: "Si él ___ (hubiera entendido) las reglas, no habría perdido el juego.", options: ["had understood", "understood", "understand"], correct: "had understood" },
+    { id: 46, text: "If you ___ (not take) the wrong turn, you would have arrived sooner.", translated: "Si tú ___ (no hubieras tomado) el giro equivocado, habrías llegado antes.", options: ["hadn't taken", "didn't take", "took"], correct: "hadn't taken" },
+    { id: 47, text: "If I ___ (not lose) my passport, I would have traveled abroad.", translated: "Si yo ___ (no hubiera perdido) mi pasaporte, habría viajado al extranjero.", options: ["hadn't lost", "didn't lose", "lost"], correct: "hadn't lost" },
+    { id: 48, text: "If you ___ (be) at the party, you would have met my friends.", translated: "Si tú ___ (hubieras estado) en la fiesta, habrías conocido a mis amigos.", options: ["had been", "were", "was"], correct: "had been" },
+    { id: 49, text: "If I ___ (not forget) to buy the tickets, we would have had a good seat.", translated: "Si yo ___ (no hubiera olvidado) comprar los boletos, habríamos tenido un buen asiento.", options: ["hadn't forgotten", "didn't forget", "forgot"], correct: "hadn't forgotten" },
+    { id: 50, text: "If she ___ (not leave) early, we could have talked more.", translated: "Si ella ___ (no se hubiera ido) temprano, habríamos podido hablar más.", options: ["hadn't left", "didn't leave", "left"], correct: "hadn't left" }
+];
+
+
+        const savedProgress = JSON.parse(localStorage.getItem(examKey)) || [];
+        let remainingQuestions = questions.filter(q => !savedProgress.includes(q.id));
+
+        const questionContainer = document.getElementById("question-container");
+        const questionText = document.getElementById("question-text");
+        const optionsContainer = document.getElementById("options-container");
+        const nextBtn = document.getElementById("next-btn");
+        const translateBtn = document.getElementById("translate-btn");
+
+        let isTranslated = false; 
+
+        function showRandomQuestion() {
+            if (remainingQuestions.length === 0) {
+                questionText.textContent = "¡Has completado el examen!";
+                optionsContainer.innerHTML = "";
+                nextBtn.style.display = "none";
+                translateBtn.style.display = "none"; 
+                localStorage.removeItem(examKey); 
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+            const currentQuestion = remainingQuestions[randomIndex];
+
+            questionText.textContent = currentQuestion.text;
+            isTranslated = false; 
+
+            optionsContainer.innerHTML = "";
+            currentQuestion.options.forEach(option => {
+                const label = document.createElement("label");
+                label.innerHTML = `<input type="radio" name="option" value="${option}"> ${option}`;
+                optionsContainer.appendChild(label);
+            });
+
+            translateBtn.onclick = () => {
+                if (isTranslated) {
+                    questionText.textContent = currentQuestion.text; 
+                } else {
+                    questionText.textContent = currentQuestion.translated; 
+                }
+                isTranslated = !isTranslated; 
+            };
+
+            nextBtn.onclick = () => {
+                const selectedOption = document.querySelector('input[name="option"]:checked');
+                if (!selectedOption) {
+                    alert("Por favor, selecciona una opción.");
+                    return;
+                }
+
+                const answer = selectedOption.value;
+                if (answer === currentQuestion.correct) {
+                    alert("Respuesta correcta.");
+                } else {
+                    alert(`Respuesta incorrecta. La respuesta correcta es: ${currentQuestion.correct}`);
+                }
+
+                savedProgress.push(currentQuestion.id);
+                localStorage.setItem(examKey, JSON.stringify(savedProgress));
+                remainingQuestions.splice(randomIndex, 1); 
+                showRandomQuestion(); 
+            };
+        }
+
+        showRandomQuestion();
+    </script>
+</body>
+</html>
